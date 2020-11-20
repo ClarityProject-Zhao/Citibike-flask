@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Citibike Rides Clustering Results</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <div>
+        <p> <a href=/>back to index page</a></p>
+
+        <h1>Results: rides clustering </h1>
+        <ul class="cluster">
+            <li><a href=/clustering/{{cluster_method}}/{{cluster_num}}/0>Feature Summary</a></li>
+            <li><a href=/clustering/{{cluster_method}}/{{cluster_num}}/1>Feature Summary - Station Net Checkout Detail</a></li>
+
+        </ul>
+
+        <p>{{cluster_method}} clustering: {{cluster_num}} clusters</p>
+
+        {% if chart_type==0 %}
+            <img src="{{url_for('static', filename=cluster_image_name[cluster_method][cluster_num][chart_type])}}" width=200*cluster_num height=800/>
+        {% else %}
+            <img src="{{url_for('static', filename=cluster_image_name[cluster_method][cluster_num][chart_type])}}" width=600 height=800/>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Citibike Rides Clustering Results</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <div>
+        <p> <a href=/>back to index page</a></p>
+
+        <h1>Results: rides overview </h1>
+        <p> Choose the starting time of an 1-hr window:</p>
+        <ul>
+            {% for hr_i in range(0,24) %}
+            <li class="hour"><a href=/occurrence/{{hr_i}} >{{hr_i}}</a></li>
+            {% endfor %}
+        </ul>
+
+        <p>Net Avg Demand for Citibike from different areas and stations during the 1-hr window starting at {{hr}} </p>
+
+        <img src="{{url_for('static', filename=image_name['area'][hr])}}" width="500" height="600" float =left />
+        <img src="{{url_for('static', filename=image_name['station'][hr])}}" width="500" height="600" float="right"/>
+
+
+<!--        <p>{{ contacts }}</p>-->
+<!--        <p>My Contacts:</p>-->
+<!--        <ul>-->
+<!--            {% for cluster_i in cluster_list %}-->
+<!--            <li>cluster {{cluster_i}}</li>-->
+<!--            {% endfor %}-->
+<!--        </ul>-->
+    </div>
+</body>
+
+</html>

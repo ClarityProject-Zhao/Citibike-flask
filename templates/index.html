@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Citibike Rides Clustering Results</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div>
+        <h1>Results </h1>
+
+        <ul>
+            <li><a href=/occurrence/0>Rides Occurrence by Hour</a>
+            <li> Rides Clustering
+                <ul>
+                    <li>K-Means
+                        <ul>
+                          <li><a href=/clustering/kmeans/2/0>2 clusters</a>
+                          <li><a href=/clustering/kmeans/3/0>3 clusters</a>
+                          <li><a href=/clustering/kmeans/4/0>4 clusters</a>
+                      </ul>
+                    <li>GMM
+                        <ul>
+                            <li><a href=/clustering/gmm/2/0>2 clusters</a>
+                            <li><a href=/clustering/gmm/3/0>3 clusters</a>
+                            <li><a href=/clustering/gmm/4/0>4 clusters</a>
+                        </ul>
+                    <li>Hierachy (ward linkage)
+                        <ul>
+                            <li><a href=/clustering/ward/2/0>2 clusters</a>
+                            <li><a href=/clustering/ward/3/0>3 clusters</a>
+                            <li><a href=/clustering/ward/4/0>4 clusters</a>
+                        </ul>
+
+                </ul>
+        </ul>
+
+
+<!--        <p>{{ contacts }}</p>-->
+<!--        <p>My Contacts:</p>-->
+<!--        <ul>-->
+<!--            {% for cluster_i in cluster_list %}-->
+<!--            <li>cluster {{cluster_i}}</li>-->
+<!--            {% endfor %}-->
+<!--        </ul>-->
+    </div>
+</body>
+
+</html>
