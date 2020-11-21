@@ -21,9 +21,9 @@
         <p>{{cluster_method}} clustering: {{cluster_num}} clusters</p>
 
         {% if chart_type==0 %}
-            <img src="{{url_for('static', filename=cluster_image_name[cluster_method][cluster_num][chart_type])}}" width=200*cluster_num height=800/>
+            <img src="{{url_for('static', filename=cluster_image_name[cluster_method][cluster_num][chart_type])}}" width=300*cluster_num height=1500/>
         {% else %}
-            <img src="{{url_for('static', filename=cluster_image_name[cluster_method][cluster_num][chart_type])}}" width=600 height=800/>
+            <img src="{{url_for('static', filename=cluster_image_name[cluster_method][cluster_num][chart_type])}}" width=800 height=300*cluster_num/>
         {% endif %}
 
     </div>
